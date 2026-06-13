@@ -112,8 +112,8 @@ a:hover {
 
 .btn-outline-custom {
     background-color: transparent;
-    color: var(--primary-dark);
-    border: 2px solid var(--primary-dark);
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     padding: 10px 26px;
     border-radius: 4px;
     font-weight: 600;
@@ -126,8 +126,9 @@ a:hover {
 }
 
 .btn-outline-custom:hover {
-    background-color: var(--primary-dark);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--primary-dark);
+    border-color: var(--white);
 }
 
 /* --- Top Bar --- */
@@ -250,8 +251,8 @@ a:hover {
 /* --- Hero Section --- */
 .hero-section {
     position: relative;
-    height: 90vh;
-    min-height: 600px;
+    min-height: 85vh;
+    padding: 160px 0 120px 0;
     display: flex;
     align-items: center;
     color: var(--white);
@@ -266,8 +267,9 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.4;
+    opacity: 0.8;
     z-index: 1;
+    transform: scale(1.02); /* Slight scale to hide edges */
 }
 
 .hero-overlay {
@@ -276,7 +278,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(10, 25, 47, 0.9) 0%, rgba(10, 25, 47, 0.6) 100%);
+    background: linear-gradient(90deg, rgba(10, 25, 47, 0.95) 0%, rgba(10, 25, 47, 0.7) 50%, rgba(10, 25, 47, 0.2) 100%);
     z-index: 2;
 }
 
@@ -285,26 +287,50 @@ a:hover {
     z-index: 3;
 }
 
+.hero-badge {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    backdrop-filter: blur(4px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.badge-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-blue);
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 10px var(--accent-blue);
+}
+
 .hero-headline {
     color: var(--white);
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.3);
     animation: fadeInUp 1s ease forwards;
 }
 
 .hero-subheadline {
-    color: var(--light-grey);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 1.25rem;
     margin-bottom: 2.5rem;
     max-width: 600px;
+    line-height: 1.6;
     animation: fadeInUp 1.2s ease forwards;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    flex-wrap: wrap;
     animation: fadeInUp 1.4s ease forwards;
 }
 
