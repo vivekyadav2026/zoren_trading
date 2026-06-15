@@ -966,3 +966,109 @@ a:hover {
         margin-top: 5px !important;
     }
 }
+
+/* Enhanced Navbar & Top Bar Styles */
+.top-bar {
+    background: linear-gradient(135deg, var(--primary-dark), #1e293b);
+    color: var(--text-light);
+    padding: 10px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.top-bar a {
+    color: #e2e8f0;
+    text-decoration: none;
+    margin-right: 18px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.top-bar a i {
+    color: var(--accent-blue);
+}
+
+.top-bar a:hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.top-bar-social a {
+    margin-right: 12px;
+    font-size: 1.05rem;
+    background: rgba(255,255,255,0.1);
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.top-bar-social a:hover {
+    background: var(--accent-blue);
+}
+
+.navbar-custom {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand-text {
+    background: linear-gradient(to right, var(--primary-dark), var(--accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+.nav-link-custom {
+    position: relative;
+    color: #334155 !important;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background-color: var(--accent-blue);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after {
+    transform: scaleX(1);
+}
+
+.btn-primary-custom {
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+}
+
+.mega-menu-content {
+    border-top: 3px solid var(--accent-blue) !important;
+    animation: fadeInDown 0.3s ease-out;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
