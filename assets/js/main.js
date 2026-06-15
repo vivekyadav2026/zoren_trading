@@ -33,14 +33,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Form Validation (Simple)
-    const contactForms = document.querySelectorAll('.contact-form');
-    contactForms.forEach(form => {
+    // WhatsApp Enquiry Form Integration
+    const allForms = document.querySelectorAll('form');
+    allForms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            // In a real scenario, AJAX call goes here.
-            alert('Thank you for your inquiry! Our team will contact you shortly.');
-            form.reset();
+            
+            // Collect data
+            const inputs = form.querySelectorAll('input, textarea, select');
+            let message = "Hello Zoren Trading,\n\nI have a new enquiry:\n\n";
+            
+            inputs.forEach(input => {
+                const labelElement = input.closest('.col-md-6, .col-md-12, .col-12, .mb-3, .row')?.querySelector('label');
+                let label = labelElement ? labelElement.innerText : (input.placeholder || input.name || "Field");
+                
+                // Clean up label (remove asterisks)
+                label = label.replace(/\*/g, '').trim();
+                
+                if(input.value.trim() !== '') {
+                    message += **: \n;
+                }
+            });
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappNumber = "97477713981"; // Primary contact number
+            const whatsappUrl = https://wa.me/?text=;
+            
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+            
+            // Optional: reset form
+            // form.reset();
         });
     });
 
@@ -62,3 +86,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
