@@ -928,3 +928,41 @@ a:hover {
 .form-icon-wrap .premium-input {
     padding-right: 45px;
 }
+
+/* Responsive adjustments for the Premium Form on Mobile */
+@media (max-width: 768px) {
+    .premium-form-wrapper {
+        padding: 25px 15px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 10px 20px rgba(10, 25, 47, 0.05) !important;
+    }
+    
+    .premium-form-wrapper::before {
+        display: none; /* Hide the decorative circle on mobile to save space */
+    }
+
+    .premium-form-label {
+        font-size: 0.85rem !important;
+        margin-bottom: 5px !important;
+    }
+
+    .premium-input {
+        padding: 12px 15px !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .form-icon-wrap .premium-input {
+        padding-right: 40px !important;
+    }
+
+    .form-icon-wrap i {
+        right: 15px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .premium-submit-btn {
+        padding: 14px !important;
+        font-size: 1rem !important;
+        margin-top: 5px !important;
+    }
+}
