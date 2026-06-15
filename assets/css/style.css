@@ -792,3 +792,61 @@ a:hover {
         font-size: 1.5rem;
     }
 }
+/* Page Banner Styles */
+.page-banner {
+    position: relative;
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--primary-dark);
+}
+.page-banner .banner-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 25, 47, 0.7);
+    z-index: 1;
+}
+.page-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 991px) {
+    .mega-menu-content {
+        padding: 15px;
+        border: none;
+        box-shadow: none;
+    }
+    .mega-menu-title {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .navbar-brand-text {
+        font-size: 1.2rem;
+    }
+    .navbar-brand img {
+        height: 40px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        padding: 60px 0;
+    }
+    .page-banner h1.display-4 {
+        font-size: 2.2rem;
+    }
+    .page-banner .lead {
+        font-size: 1rem;
+    }
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+    .footer-bottom .row {
+        text-align: center;
+    }
+    .footer-bottom .text-md-end {
+        margin-top: 10px;
+    }
+}
