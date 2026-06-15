@@ -154,53 +154,47 @@
                 <div class="col-lg-8">
                     <div class="bg-white p-5 rounded shadow-sm border h-100">
                         <h3 class="mb-4 font-heading text-dark">Send Us a Message</h3>
-                        <form class="contact-form">
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold">Company Name</label>
-                                    <input type="text" class="form-control form-control-custom" required>
+                                                <div class="premium-form-wrapper mt-4">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="premium-form-label">Full Name *</label>
+                                        <div class="form-icon-wrap">
+                                            <input type="text" class="premium-input w-100" placeholder="John Doe" required>
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="premium-form-label">Company Name</label>
+                                        <div class="form-icon-wrap">
+                                            <input type="text" class="premium-input w-100" placeholder="Your Enterprise">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="premium-form-label">Email Address *</label>
+                                        <div class="form-icon-wrap">
+                                            <input type="email" class="premium-input w-100" placeholder="sales@example.com" required>
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="premium-form-label">Phone / WhatsApp *</label>
+                                        <div class="form-icon-wrap">
+                                            <input type="tel" class="premium-input w-100" placeholder="+974 7771 3981" required>
+                                            <i class="fas fa-phone-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="premium-form-label">Requirement Details *</label>
+                                        <textarea class="premium-input w-100" rows="5" placeholder="Specify product categories, technical specs, or quantities..." required></textarea>
+                                    </div>
+                                    <div class="col-md-12 text-center mt-4">
+                                        <button type="submit" class="btn btn-primary-custom premium-submit-btn w-100"><i class="fas fa-paper-plane me-2"></i> Submit Enquiry Now</button>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold">Contact Person Name</label>
-                                    <input type="text" class="form-control form-control-custom" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold">Email Address</label>
-                                    <input type="email" class="form-control form-control-custom" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold">Phone / WhatsApp Number</label>
-                                    <input type="tel" class="form-control form-control-custom" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold">Country</label>
-                                    <input type="text" class="form-control form-control-custom" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold">Product Requirement</label>
-                                    <select class="form-control form-control-custom" required>
-                                        <option value="" selected disabled>Select Category</option>
-                                        <option value="chemicals">Chemical Products</option>
-                                        <option value="construction">Construction Materials</option>
-                                        <option value="valves">Valves & Flow Control</option>
-                                        <option value="electrical">Electrical Products</option>
-                                        <option value="machinery">Industrial Machinery</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label fw-bold">Estimated Quantity / Volume</label>
-                                    <input type="text" class="form-control form-control-custom" placeholder="e.g. 500 Liters, 10 Tons, 1000 Units" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label fw-bold">Message Details</label>
-                                    <textarea class="form-control form-control-custom" rows="5" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary-custom w-100 justify-content-center py-3 fs-5">Submit Inquiry <i class="fas fa-paper-plane"></i></button>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -286,6 +280,7 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
 
