@@ -33,15 +33,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Email Enquiry Form Integration
+    // AJAX PHP Enquiry Form Integration
     const allForms = document.querySelectorAll('form');
     allForms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Show loading state
+            const submitBtn = form.querySelector('button[type="submit"]');
+            let originalBtnText = "Submit";
+            if(submitBtn) {
+                originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending...';
+                submitBtn.disabled = true;
+            }
+            
             // Collect data
             const inputs = form.querySelectorAll('input, textarea, select');
-            let message = "Hello Zoren Trading,\n\nI have a new enquiry:\n\n";
+            let formData = {};
             
             inputs.forEach(input => {
                 const labelElement = input.closest('.col-md-6, .col-md-12, .col-12, .mb-3, .row')?.querySelector('label');
@@ -51,21 +60,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 label = label.replace(/\*/g, '').trim();
                 
                 if(input.value.trim() !== '') {
-                    message += `*${label}*: ${input.value}\n`;
+                    formData[label] = input.value;
                 }
             });
             
-            // Encode message for Email
-            const encodedMessage = encodeURIComponent(message);
-            const emailAddress = "info@zorentradingservices.com";
-            const emailSubject = encodeURIComponent("New Website Enquiry");
-            const mailtoUrl = `mailto:${emailAddress}?subject=${emailSubject}&body=${encodedMessage}`;
-            
-            // Open default email client
-            window.location.href = mailtoUrl;
-            
-            // Optional: reset form
-            // form.reset();
+            // Send AJAX request to PHP backend
+            fetch('process_form.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.status === 'success') {
+                    alert('Thank you! Your enquiry has been sent successfully.');
+                    form.reset();
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            })
+            .finally(() => {
+                // Restore button
+                if(submitBtn) {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            });
         });
     });
 
