@@ -45,12 +45,13 @@ $is_product_active = in_array($current_page, [
     <div class="top-bar">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-8">
-                    <a href="tel:+97477713981"><i class="fas fa-phone-alt me-2"></i> +974 7771 3981</a> <a href="tel:+97460011038" class="ms-3"><i class="fas fa-phone-alt me-2"></i> +974 6001 1038</a>
+                <div class="col-lg-9 col-md-8 d-flex flex-wrap align-items-center gap-3 top-bar-contacts">
+                    <a href="tel:+97477713981"><i class="fas fa-phone-alt me-2"></i> +974 7771 3981</a>
+                    <a href="tel:+97460011038"><i class="fas fa-phone-alt me-2"></i> +974 6001 1038</a>
                     <a href="mailto:info@zorentradingservices.com"><i class="fas fa-envelope me-2"></i> info@zorentradingservices.com</a>
-                    <span><i class="fas fa-clock me-2"></i> Mon - Sat: 8:00 AM - 5:00 PM</span>
+                    <span class="text-nowrap"><i class="fas fa-clock me-2"></i> Mon - Sat: 8:00 AM - 5:00 PM</span>
                 </div>
-                <div class="col-md-4 text-end top-bar-social">
+                <div class="col-lg-3 col-md-4 text-end top-bar-social">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
