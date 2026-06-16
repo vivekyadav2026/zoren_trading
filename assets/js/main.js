@@ -55,13 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // Encode message for URL
+            // Encode message for Email
             const encodedMessage = encodeURIComponent(message);
-            const whatsappNumber = "97477713981"; // Primary contact number
-            const whatsappUrl = https://wa.me/?text=;
+            const emailAddress = "info@zorentradingservices.com";
+            const emailSubject = encodeURIComponent("New Website Enquiry");
+            const mailtoUrl = mailto:?subject=&body=;
             
-            // Open WhatsApp in a new tab
-            window.open(whatsappUrl, '_blank');
+            // Open default email client
+            window.location.href = mailtoUrl;
             
             // Optional: reset form
             // form.reset();
@@ -86,4 +87,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
 
