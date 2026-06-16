@@ -6,3 +6,11 @@ Email Address: test@example.com
 Requirement Details: This is a test submission from CLI.
 --------------------------------------------------
 
+==================================================
+New Website Enquiry: 2026-06-16 08:49:27
+==================================================
+Full Name: Test User
+Email Address: test@example.com
+Requirement Details: This is a test submission from CLI.
+--------------------------------------------------
+
