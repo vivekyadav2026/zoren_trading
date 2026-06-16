@@ -1,36 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Zoren Trading | Premium B2B Industrial Supply & Trading Company</title>
-    <meta name="description" content="Zoren Trading is a global B2B supplier of Chemical Products, Construction Materials, Valves, Hydraulic Components, Electrical Items, and Industrial Machinery.">
-    <meta name="keywords" content="industrial trading, B2B supplier, chemical products, construction materials, valves, hydraulic fittings, electrical products, laboratory equipment, machinery">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Zoren Trading | Global Industrial Supplier">
-    <meta property="og:description" content="Premium B2B supplier of industrial raw materials, flow control solutions, construction materials, and heavy machinery for global projects.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.zorentrading.com/">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
+<?php
+$page_title = 'Zoren Trading | Premium B2B Industrial Supply & Trading Company';
+$page_desc = 'Zoren Trading is a global B2B supplier of Chemical Products, Construction Materials, Valves, Hydraulic Components, Electrical Items, and Industrial Machinery.';
+$custom_head = <<<'HTML'
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -44,90 +16,15 @@
       }
     }
     </script>
-</head>
-<body>
+    <meta property="og:title" content="Zoren Trading | Global Industrial Supplier">
+    <meta property="og:description" content="Premium B2B supplier of industrial raw materials, flow control solutions, construction materials, and heavy machinery for global projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zorentrading.com/">
+    <meta name="keywords" content="industrial trading, B2B supplier, chemical products, construction materials, valves, hydraulic fittings, electrical products, laboratory equipment, machinery">
+HTML;
+include 'header.php';
+?>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <a href="tel:+97477713981"><i class="fas fa-phone-alt me-2"></i> +974 7771 3981</a> <a href="tel:+97460011038" class="ms-3"><i class="fas fa-phone-alt me-2"></i> +974 6001 1038</a>
-                    <a href="mailto:info@zorentradingservices.com"><i class="fas fa-envelope me-2"></i> info@zorentradingservices.com</a>
-                    <span><i class="fas fa-clock me-2"></i> Mon - Sat: 9:00 AM - 6:00 PM</span>
-                </div>
-                <div class="col-md-4 text-end top-bar-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="assets/images/logo.png" alt="Zoren Trading Logo" style="height: 55px; max-height: 55px; width: auto; object-fit: contain; margin-right: 10px;">
-                    <span class="navbar-brand-text">ZOREN TRADING</span>
-                </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Us</a></li>
-                    <li class="nav-item dropdown dropdown-mega position-static">
-                        <a class="nav-link nav-link-custom dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Products</a>
-                        <div class="dropdown-menu shadow w-100 mega-menu-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <h6 class="mega-menu-title">Industrial Materials</h6>
-                                        <ul class="mega-menu-list">
-                                            <li><a href="chemical-products.html"><i class="fas fa-chevron-right"></i> Chemical Products</a></li>
-                                            <li><a href="construction-materials.html"><i class="fas fa-chevron-right"></i> Construction Materials</a></li>
-                                            <li><a href="industrial-raw-materials.html"><i class="fas fa-chevron-right"></i> Raw Materials</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h6 class="mega-menu-title">Flow & Fluid Control</h6>
-                                        <ul class="mega-menu-list">
-                                            <li><a href="valves-flow-control.html"><i class="fas fa-chevron-right"></i> Valves & Flow Control</a></li>
-                                            <li><a href="hydraulic-products.html"><i class="fas fa-chevron-right"></i> Hydraulic Hoses & Fittings</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h6 class="mega-menu-title">Hardware & Electrical</h6>
-                                        <ul class="mega-menu-list">
-                                            <li><a href="electrical-products.html"><i class="fas fa-chevron-right"></i> Electrical Products</a></li>
-                                            <li><a href="fasteners-hardware.html"><i class="fas fa-chevron-right"></i> Fasteners & Hardware</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h6 class="mega-menu-title">Equipment & Machinery</h6>
-                                        <ul class="mega-menu-list">
-                                            <li><a href="laboratory-equipment.html"><i class="fas fa-chevron-right"></i> Laboratory Equipment</a></li>
-                                            <li><a href="industrial-machinery.html"><i class="fas fa-chevron-right"></i> Industrial Machinery</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link nav-link-custom" href="industries-we-serve.html">Industries</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
-                </ul>
-                <div class="d-none d-lg-flex">
-                    <a href="request-quote.html" class="btn btn-primary-custom">Request A Quote</a>
-                </div>
-            </div>
-        </div>
-    </nav>
 
     <!-- Hero Section -->
     <header class="hero-section">
@@ -144,26 +41,15 @@
                     <h1 class="hero-headline">Empowering the Future of Industrial Supply</h1>
                     <p class="hero-subheadline">Your trusted enterprise partner for Chemical Products, Construction Materials, Machinery, and Flow Control Solutions.</p>
                     <div class="hero-buttons">
-                        <a href="request-quote.html" class="btn btn-primary-custom btn-lg"><i class="fas fa-file-invoice"></i> Request Quote</a>
-                        <a href="products.html" class="btn btn-outline-custom btn-lg"><i class="fas fa-box-open"></i> Explore Products</a>
+                        <a href="request-quote.php" class="btn btn-primary-custom btn-lg"><i class="fas fa-file-invoice"></i> Request Quote</a>
+                        <a href="products.php" class="btn btn-outline-custom btn-lg"><i class="fas fa-box-open"></i> Explore Products</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Floating Action Buttons -->
-    <div class="floating-container">
-        <a href="https://wa.me/97477713981" class="floating-btn floating-whatsapp" data-tooltip="Chat on WhatsApp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="tel:+97477713981" class="floating-btn floating-call" data-tooltip="Call Us Now">
-            <i class="fas fa-phone-alt"></i>
-        </a>
-        <a href="mailto:info@zorentradingservices.com" class="floating-btn floating-email" data-tooltip="Email Us">
-            <i class="fas fa-envelope"></i>
-        </a>
-    </div>
+    
 
     <!-- About Preview Section -->
     <section class="section-padding bg-light-grey">
@@ -208,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="about.html" class="btn btn-primary-custom">Discover More</a>
+                    <a href="about.php" class="btn btn-primary-custom">Discover More</a>
                 </div>
             </div>
         </div>
@@ -230,7 +116,7 @@
                         <i class="fas fa-flask category-icon"></i>
                         <h3 class="category-title">Chemical Products</h3>
                         <p class="category-desc">Industrial chemicals, solvents, acids, and water treatment solutions.</p>
-                        <a href="chemical-products.html" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
+                        <a href="chemical-products.php" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Category 2 -->
@@ -239,7 +125,7 @@
                         <i class="fas fa-hard-hat category-icon"></i>
                         <h3 class="category-title">Construction Materials</h3>
                         <p class="category-desc">Cement, steel products, structural materials, and waterproofing.</p>
-                        <a href="construction-materials.html" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
+                        <a href="construction-materials.php" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Category 3 -->
@@ -248,7 +134,7 @@
                         <i class="fas fa-cubes category-icon"></i>
                         <h3 class="category-title">Industrial Raw Materials</h3>
                         <p class="category-desc">Metals, minerals, polymers, and essential rubber products.</p>
-                        <a href="industrial-raw-materials.html" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
+                        <a href="industrial-raw-materials.php" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Category 4 -->
@@ -257,7 +143,7 @@
                         <i class="fas fa-faucet category-icon"></i>
                         <h3 class="category-title">Valves & Flow Control</h3>
                         <p class="category-desc">Ball, butterfly, gate, and safety relief valves for all industries.</p>
-                        <a href="valves-flow-control.html" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
+                        <a href="valves-flow-control.php" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Category 5 -->
@@ -266,7 +152,7 @@
                         <i class="fas fa-compress-arrows-alt category-icon"></i>
                         <h3 class="category-title">Hydraulic Products</h3>
                         <p class="category-desc">High-pressure hoses, fittings, tube assemblies, and connectors.</p>
-                        <a href="hydraulic-products.html" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
+                        <a href="hydraulic-products.php" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Category 6 -->
@@ -275,7 +161,7 @@
                         <i class="fas fa-bolt category-icon"></i>
                         <h3 class="category-title">Electrical Products</h3>
                         <p class="category-desc">MCCB, MCB, cables, panels, and industrial electrical components.</p>
-                        <a href="electrical-products.html" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
+                        <a href="electrical-products.php" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Category 7 -->
@@ -284,7 +170,7 @@
                         <i class="fas fa-tools category-icon"></i>
                         <h3 class="category-title">Fasteners & Hardware</h3>
                         <p class="category-desc">Bolts, nuts, U-bolts, thread rods, and custom foundation bolts.</p>
-                        <a href="fasteners-hardware.html" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
+                        <a href="fasteners-hardware.php" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Category 8 -->
@@ -293,12 +179,12 @@
                         <i class="fas fa-microscope category-icon"></i>
                         <h3 class="category-title">Laboratory Equipment</h3>
                         <p class="category-desc">Glassware, precision testing, and measurement instruments.</p>
-                        <a href="laboratory-equipment.html" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
+                        <a href="laboratory-equipment.php" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Extra Category for alignment -->
                 <div class="col-lg-12 text-center mt-5">
-                    <a href="products.html" class="btn btn-outline-custom">View All Categories</a>
+                    <a href="products.php" class="btn btn-outline-custom">View All Categories</a>
                 </div>
             </div>
         </div>
@@ -362,7 +248,7 @@
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="gallery.html" class="btn btn-outline-primary">View Full Gallery</a>
+                <a href="gallery.php" class="btn btn-outline-primary">View Full Gallery</a>
             </div>
         </div>
     </section>
@@ -409,7 +295,7 @@
             <h2 class="mb-4" style="color: var(--white);">Ready to Start Your Next Project?</h2>
             <p class="mb-5" style="color: var(--light-grey); font-size: 1.1rem;">Contact us today to request a comprehensive quote for your industrial supply needs.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="request-quote.html" class="btn btn-primary-custom"><i class="fas fa-file-invoice"></i> Request a Quote</a>
+                <a href="request-quote.php" class="btn btn-primary-custom"><i class="fas fa-file-invoice"></i> Request a Quote</a>
                 <a href="tel:+97477713981" class="btn btn-outline-custom" style="color: var(--white); border-color: var(--white);"><i class="fas fa-phone-alt"></i> Call Now</a>
             </div>
         </div>
@@ -472,95 +358,5 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 footer-widget">
-                    <a href="index.html" class="d-inline-block bg-white p-2 rounded mb-4 shadow-sm text-decoration-none">
-                        <img src="assets/images/logo.png" alt="Zoren Trading Logo" style="height: 60px; max-height: 60px; width: auto; object-fit: contain;">
-                    </a>
-                    <p class="mb-4 pe-lg-4">Global B2B supplier of industrial raw materials, machinery, and flow control solutions. Delivering excellence to infrastructure projects worldwide.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-6 footer-widget">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Company</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="certifications-quality.html">Certifications</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="blog.html">Blog / News</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 footer-widget">
-                    <h4 class="footer-title">Categories</h4>
-                    <ul class="footer-links">
-                        <li><a href="chemical-products.html">Chemical Products</a></li>
-                        <li><a href="construction-materials.html">Construction Materials</a></li>
-                        <li><a href="valves-flow-control.html">Valves & Flow Control</a></li>
-                        <li><a href="hydraulic-products.html">Hydraulic Products</a></li>
-                        <li><a href="electrical-products.html">Electrical Products</a></li>
-                        <li><a href="industrial-machinery.html">Industrial Machinery</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 footer-widget">
-                    <h4 class="footer-title">Contact Info</h4>
-                    <ul class="list-unstyled text-light-grey mb-4">
-                        <li class="mb-3 d-flex"><i class="fas fa-map-marker-alt mt-1 me-3 text-primary"></i> <span>B Ring Road, Zone 15, Al Doha Al Jadeeda, Doha, Qatar<br><a href="https://share.google/JW5NIC4KqaweCAgKM" target="_blank" style="color: inherit; text-decoration: underline;">View on Map: Al Doha Al Jadeed Zoren Trading and Services</a></span></li>
-                        <li class="mb-3 d-flex"><i class="fas fa-phone-alt mt-1 me-3 text-primary"></i> <span>+974 7771 3981<br>+974 6001 1038</span></li>
-                        <li class="mb-3 d-flex"><i class="fas fa-envelope mt-1 me-3 text-primary"></i> <span>info@zorentradingservices.com<br>sales@topdarascoutandguides.in</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom text-center">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-md-start mb-3 mb-md-0">
-                        <p class="mb-0">&copy; 2026 Zoren Trading. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="#" class="text-light-grey text-decoration-none me-3">Privacy Policy</a>
-                        <a href="#" class="text-light-grey text-decoration-none">Terms & Conditions</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JS -->
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<?php include 'footer.php'; ?>
