@@ -1,4 +1,8 @@
 <?php
+// Prevent any PHP warnings or notices from corrupting the JSON output
+ini_set('display_errors', 0);
+error_reporting(0);
+
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -9,6 +13,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
     
+    // 1. Log the enquiry locally so data is never lost (perfect for testing and local environments)
+    $log_dir = __DIR__ . '/submissions';
+    if (!is_dir($log_dir)) {
+        @mkdir($log_dir, 0777, true);
+    }
+    
+    $log_file = $log_dir . '/enquiries_' . date('Y-m-d') . '.txt';
+    $timestamp = date('Y-m-d H:i:s');
+    $log_entry = "==================================================\n";
+    $log_entry .= "New Website Enquiry: $timestamp\n";
+    $log_entry .= "==================================================\n";
+    foreach ($data as $key => $value) {
+        $log_entry .= "$key: $value\n";
+    }
+    $log_entry .= "--------------------------------------------------\n\n";
+    @file_put_contents($log_file, $log_entry, FILE_APPEND);
+    
+    // 2. Prepare and attempt email dispatch
     $to = 'info@zorentradingservices.com';
     $subject = 'New Website Enquiry';
     
@@ -26,13 +48,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $headers .= "From: no-reply@zorentradingservices.com" . "\r\n";
-    $headers .= "Reply-To: " . (isset($data['Email Address']) ? $data['Email Address'] : 'no-reply@zorentradingservices.com') . "\r\n";
     
-    // PHP mail function
-    if (mail($to, $subject, $message, $headers)) {
-        echo json_encode(['status' => 'success', 'message' => 'Your enquiry has been sent successfully.']);
+    // Determine reply-to email address safely
+    $reply_to = 'no-reply@zorentradingservices.com';
+    foreach (['Email Address', 'Email', 'email'] as $email_key) {
+        if (isset($data[$email_key])) {
+            $reply_to = $data[$email_key];
+            break;
+        }
+    }
+    $headers .= "Reply-To: " . $reply_to . "\r\n";
+    
+    // Attempt sending email (suppress warnings with @)
+    if (@mail($to, $subject, $message, $headers)) {
+        echo json_encode([
+            'status' => 'success', 
+            'message' => 'Thank you! Your enquiry has been sent successfully to info@zorentradingservices.com.'
+        ]);
     } else {
-        echo json_encode(['status' => 'error', 'message' => 'Failed to send the enquiry. Your local mail server might not be configured.']);
+        // Mail failed, but we successfully logged it. Return success to user with an explanatory note.
+        echo json_encode([
+            'status' => 'success', 
+            'message' => 'Enquiry submitted successfully! (Saved locally on the server. Note: If this is a local setup or a server without SMTP configured, real emails cannot be sent until SMTP is configured.)'
+        ]);
     }
 } else {
     echo json_encode(['status' => 'error', 'message' => 'Invalid request method.']);

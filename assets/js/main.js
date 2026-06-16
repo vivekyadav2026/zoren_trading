@@ -72,10 +72,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 body: JSON.stringify(formData)
             })
-            .then(response => response.json())
+            .then(response => {
+                return response.text().then(text => {
+                    try {
+                        return JSON.parse(text);
+                    } catch(e) {
+                        console.error('Server response was not JSON:', text);
+                        return {
+                            status: 'error',
+                            message: 'Invalid response from server. Received: ' + (text.trim() ? text.substring(0, 300) : 'Empty Response')
+                        };
+                    }
+                });
+            })
             .then(data => {
                 if(data.status === 'success') {
-                    alert('Thank you! Your enquiry has been sent successfully.');
+                    alert(data.message || 'Thank you! Your enquiry has been sent successfully.');
                     form.reset();
                 } else {
                     alert('Error: ' + data.message);
@@ -83,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred. Please try again.');
+                alert('Connection error. Please check if your server is running and try again.');
             })
             .finally(() => {
                 // Restore button
