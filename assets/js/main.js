@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // WhatsApp Enquiry Form Integration
+    // Email Enquiry Form Integration
     const allForms = document.querySelectorAll('form');
     allForms.forEach(form => {
         form.addEventListener('submit', function(e) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 label = label.replace(/\*/g, '').trim();
                 
                 if(input.value.trim() !== '') {
-                    message += **: \n;
+                    message += `*${label}*: ${input.value}\n`;
                 }
             });
             
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const encodedMessage = encodeURIComponent(message);
             const emailAddress = "info@zorentradingservices.com";
             const emailSubject = encodeURIComponent("New Website Enquiry");
-            const mailtoUrl = mailto:?subject=&body=;
+            const mailtoUrl = `mailto:${emailAddress}?subject=${emailSubject}&body=${encodedMessage}`;
             
             // Open default email client
             window.location.href = mailtoUrl;
@@ -87,5 +87,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
-
-
