@@ -369,6 +369,162 @@
             background-color: #475569;
         }
 
+        /* --- Mobile Responsiveness for Screens --- */
+        @media screen and (max-width: 840px) {
+            .letterhead-container {
+                display: block !important;
+                width: 95% !important;
+                margin: 20px auto !important;
+                padding: 20px 15px 25px 15px !important;
+                min-height: auto !important;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+            }
+
+            .action-bar {
+                width: 95% !important;
+                margin: 10px auto 0 auto !important;
+                flex-direction: column !important;
+                gap: 15px !important;
+                text-align: center !important;
+                align-items: center !important;
+                padding: 15px !important;
+            }
+
+            .action-buttons {
+                width: 100% !important;
+                justify-content: center !important;
+                display: flex !important;
+                gap: 10px !important;
+            }
+
+            .header {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                gap: 20px !important;
+                padding-bottom: 15px !important;
+                margin-bottom: 20px !important;
+                border-bottom: 2px solid var(--light-grey) !important;
+            }
+
+            .logo-section {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                gap: 10px !important;
+            }
+
+            .contact-info {
+                display: block !important;
+                text-align: center !important;
+                max-width: 100% !important;
+            }
+
+            .contact-info p {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                text-align: center !important;
+                margin-bottom: 6px !important;
+            }
+
+            .design-bar {
+                display: block !important;
+                height: 5px !important;
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+
+            .doc-meta {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 10px !important;
+                margin-bottom: 20px !important;
+                font-size: 0.9rem !important;
+            }
+
+            .meta-ref, .meta-date {
+                display: block !important;
+                text-align: left !important;
+            }
+
+            .recipient-section {
+                display: block !important;
+                margin-bottom: 20px !important;
+                font-size: 0.9rem !important;
+                text-align: left !important;
+            }
+
+            .recipient-details {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .letter-subject {
+                display: block !important;
+                font-size: 0.95rem !important;
+                margin-bottom: 20px !important;
+                line-height: 1.4 !important;
+                text-align: center !important;
+                white-space: normal !important;
+            }
+
+            .editable-content {
+                min-height: 200px !important;
+                padding: 5px !important;
+                font-size: 10pt !important;
+            }
+
+            .sign-off {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+                margin-top: 30px !important;
+            }
+
+            .signature-block {
+                width: 100% !important;
+                text-align: center !important;
+                display: block !important;
+            }
+
+            .sig-line {
+                margin-top: 20px !important;
+                width: 150px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .watermark {
+                width: 180px !important;
+                height: 180px !important;
+            }
+
+            .footer {
+                margin-top: 30px !important;
+                padding-top: 15px !important;
+                display: block !important;
+            }
+
+            .footer-logo-line {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 6px !important;
+                text-align: center !important;
+                align-items: center !important;
+            }
+
+            .footer-address-line {
+                font-size: 0.7rem !important;
+                text-align: center !important;
+                margin-top: 10px !important;
+                display: block !important;
+            }
+        }
+
         /* --- Print Media Query Overrides --- */
         @media print {
             body {
@@ -448,6 +604,7 @@
                     <p><i class="fas fa-map-marker-alt"></i> B Ring Road, Zone 15, Al Doha Al Jadeeda, Doha, Qatar</p>
                     <p><i class="fas fa-phone-alt"></i> +974 7771 3981 | +974 6001 1038</p>
                     <p><i class="fas fa-envelope"></i> info@zorentradingservices.com</p>
+                    <p><i class="fas fa-envelope"></i> sales@zorentradingservices.com</p>
                     <p><i class="fas fa-globe"></i> www.zorentradingservices.com</p>
                 </div>
             </div>
@@ -524,7 +681,7 @@
                 </div>
                 <div class="footer-address-line">
                     Registered Office: B Ring Road, Zone 15, Al Doha Al Jadeeda, Doha, State of Qatar<br>
-                    CR No: 125487B | Email: sales@topdarascoutandguides.in | Hotline: +974 7771 3981
+                    CR No: 125487B | Email: sales@zorentradingservices.com | Hotline: +974 7771 3981
                 </div>
             </div>
         </div>
