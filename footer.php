@@ -21,11 +21,11 @@
                     </a>
                     <p class="mb-4 pe-lg-4">Global B2B supplier of industrial raw materials, machinery, and flow control solutions. Delivering excellence to infrastructure projects worldwide.</p>
                     <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61591135315928" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/zorentrading202" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/zoren-trading-43218a418/?isSelfProfile=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/zorentradingservices" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/97477713981" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 

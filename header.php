@@ -52,10 +52,10 @@ $is_product_active = in_array($current_page, [
                     <span class="text-nowrap"><i class="fas fa-clock me-2"></i> Mon - Sat: 8:00 AM - 5:00 PM</span>
                 </div>
                 <div class="col-lg-3 col-md-4 text-end top-bar-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61591135315928" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/zorentrading202" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/zoren-trading-43218a418/?isSelfProfile=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/zorentradingservices" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
