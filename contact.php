@@ -39,7 +39,7 @@ include 'header.php';
                             <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
                             <div class="contact-info-text">
                                 <h5>Direct Call</h5>
-                                <p>+974 7771 3981<br>+974 6001 1038</p>
+                                <p>+974 7771 3981</p>
                             </div>
                         </div>
                         
@@ -47,7 +47,7 @@ include 'header.php';
                             <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
                             <div class="contact-info-text">
                                 <h5>WhatsApp</h5>
-                                <p>+974 7771 3981<br>+974 6001 1038 (24/7 Support)</p>
+                                <p>+974 7771 3981 (24/7 Support)</p>
                             </div>
                         </div>
                         

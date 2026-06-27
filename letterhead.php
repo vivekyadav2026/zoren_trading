@@ -602,7 +602,7 @@
                 
                 <div class="contact-info">
                     <p><i class="fas fa-map-marker-alt"></i> B Ring Road, Zone 15, Al Doha Al Jadeeda, Doha, Qatar</p>
-                    <p><i class="fas fa-phone-alt"></i> +974 7771 3981 | +974 6001 1038</p>
+                    <p><i class="fas fa-phone-alt"></i> +974 7771 3981</p>
                     <p><i class="fas fa-envelope"></i> info@zorentradingservices.com</p>
                     <p><i class="fas fa-envelope"></i> sales@zorentradingservices.com</p>
                     <p><i class="fas fa-globe"></i> www.zorentradingservices.com</p>

@@ -20,13 +20,13 @@
                         <img src="assets/images/logo.png" alt="Zoren Trading Logo" style="height: 60px; max-height: 60px; width: auto; object-fit: contain;">
                     </a>
                     <p class="mb-4 pe-lg-4">Global B2B supplier of industrial raw materials, machinery, and flow control solutions. Delivering excellence to infrastructure projects worldwide.</p>
-                    <div class="footer-social">
+                    <!-- <div class="footer-social">
                         <a href="https://www.facebook.com/profile.php?id=61591135315928" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://x.com/zorentrading202" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.linkedin.com/in/zoren-trading-43218a418/?isSelfProfile=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.instagram.com/zorentradingservices" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://wa.me/97477713981" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <div class="col-lg-2 col-md-6 footer-widget">
@@ -58,7 +58,7 @@
                     <h4 class="footer-title">Contact Info</h4>
                     <ul class="list-unstyled text-light-grey mb-4">
                         <li class="mb-3 d-flex"><i class="fas fa-map-marker-alt mt-1 me-3 text-primary"></i> <span>B Ring Road, Zone 15, Al Doha Al Jadeeda, Doha, Qatar<br><a href="https://share.google/JW5NIC4KqaweCAgKM" target="_blank" style="color: inherit; text-decoration: underline;">View on Map: Al Doha Al Jadeed Zoren Trading and Services</a></span></li>
-                        <li class="mb-3 d-flex"><i class="fas fa-phone-alt mt-1 me-3 text-primary"></i> <span>+974 7771 3981<br>+974 6001 1038</span></li>
+                        <li class="mb-3 d-flex"><i class="fas fa-phone-alt mt-1 me-3 text-primary"></i> <span>+974 7771 3981</span></li>
                         <li class="mb-3 d-flex"><i class="fas fa-envelope mt-1 me-3 text-primary"></i> <span>info@zorentradingservices.com<br>sales@zorentradingservices.in</span></li>
                     </ul>
                 </div>
