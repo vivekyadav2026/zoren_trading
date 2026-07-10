@@ -72,7 +72,6 @@
                         <p class="mb-0">&copy; <?php echo date('Y'); ?> Zoren Trading. All Rights Reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
-                        <a href="letterhead.php" class="text-light-grey text-decoration-none me-3" target="_blank"><i class="fas fa-file-alt me-1"></i> Letterhead Template</a>
                         <a href="#" class="text-light-grey text-decoration-none me-3">Privacy Policy</a>
                         <a href="#" class="text-light-grey text-decoration-none">Terms & Conditions</a>
                     </div>
